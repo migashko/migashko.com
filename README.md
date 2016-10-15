@@ -1,0 +1,2 @@
+# migashko.com
+home page
