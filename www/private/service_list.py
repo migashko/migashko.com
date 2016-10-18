@@ -8,8 +8,6 @@ from genshi.output import encode, get_serializer
 import codecs
 import subprocess
 
-
-
 sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 loader = TemplateLoader(
@@ -29,10 +27,14 @@ def run_program(cmd):
   return ret;
 
 def get_service_status(name):
-  return run_program("sudo systemctl is-active " + name)
+  return run_program("systemctl is-active " + name)
+
+import getpass
+getpass.getuser()
 
 if __name__ == '__main__':
-  #try:
+  try:
+#    print( getpass.getuser() )
     names=["mpd", "transmission", "mediacenter", "lighttpd"]
     services=[]
     for i in range(len(names)):
@@ -44,5 +46,5 @@ if __name__ == '__main__':
     rend = stream.render(encoding="utf-8")
     s = rend.decode("utf-8")
     print(s)
-  #except Exception as e:
-  #  print(u"I/O error: {0}".format( str(e)))
+  except Exception as e:
+    print(u"I/O error: {0}".format( str(e)))
