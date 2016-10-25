@@ -9,20 +9,11 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
   </head>
   <body class="index">
-    <div py:if="'services' in g" >
-      <div class="service" py:for="srv in g.services">
-        ${srv.name} <b>${srv.status}</b> 
-        <div py:if="'start' in srv" >
-          <a href="${srv.start}">Запустить</a>
-        </div>
-        <div py:if="'stop' in srv" >
-          <a href="${srv.stop}">Остановить</a>
-        </div>
-        <div py:if="'restart' in srv" >
-          <a href="${srv.restart}">Перезапустить</a>
-        </div>
-        
+    <div py:if="'result' in g" >
+      <div class="result">
+        ${g.result}
       </div>
     </div>
+    <a href="service_list.py">Продолжить</a>
   </body>
 </html>
