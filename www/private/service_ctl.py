@@ -22,10 +22,15 @@ if __name__ == '__main__':
     if 'cmd' in par:
       if par['cmd'][0]=="restart":
         res = root.restart(par['name'][0])
-        if not res:
-          g["result"]= par['name'][0] + " перезапущен"
-        else:
-          g["result"]= "Error: " + par['name'][0] + ": " + res
+        g["result"]= par['name'][0] + " перезапущен"
+      elif par['cmd'][0]=="start":
+        res = root.start(par['name'][0])
+        g["result"]= par['name'][0] + " запущен"
+      elif par['cmd'][0]=="stop":
+        res = root.stop(par['name'][0])
+        g["result"]= par['name'][0] + " остановлен"
+      if not res:
+        g["result"]= "Error: " + par['name'][0] + ": " + res
     
     
     
