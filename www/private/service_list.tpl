@@ -43,6 +43,19 @@
           width:128px;
           padding-left: 16px;
         }
+        #reload
+        {
+          height : 128px;
+          width:128px;
+          padding-left: 314px;
+        }
+        #reload-image
+        {
+          height : 128px;
+          width:128px;
+          background: url(reload.png) 100% 100% no-repeat; /* Добавляем фон */
+          background-size: 128px; /* Масштабируем фон */
+        }
     </style>
   </head>
   <body class="index">
@@ -68,6 +81,12 @@
           <a href="${srv.stop}"><img src="stop.png"></img></a>
         </div>
       </div>
+    </div>
+    <div id="reload">
+      <a id="reload-a" href="service_list.py">
+        <div id="reload-image">
+        </div>
+      </a>
     </div>
   </body>
 </html>
