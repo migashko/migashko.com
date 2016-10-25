@@ -17,7 +17,13 @@
           display: table-cell;
           vertical-align: middle;
           width:96px;
+         
         }
+
+        .service-status img{
+           padding-left: 24px
+        }
+
         .service-ico{
           display: table-cell;
           vertical-align: middle;
@@ -35,6 +41,7 @@
           display: table-cell;
           vertical-align: middle;
           width:128px;
+          padding-left: 16px;
         }
     </style>
   </head>
@@ -42,7 +49,7 @@
     <div py:if="'services' in g" >
       <div class="service" py:for="srv in g.services">
         <div class="service-status">        
-          <img src="${srv.status}.png"></img>
+          <img width="48px" src="${srv.status}.png"></img>
           <!-- <b>${srv.status}</b> --> 
         </div>
         <div class="service-ico">
