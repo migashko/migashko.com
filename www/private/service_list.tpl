@@ -26,9 +26,9 @@
         .service-name{
           display: table-cell;
           vertical-align: middle;
-          font-size: 96px;
+          font-size: 64px;
           font-family: Arial, Verdana, Helvetica, sans-serif;
-          width:600px;
+          width:420px;
         }
         .service-cmd{
           display: table-cell;
@@ -51,13 +51,13 @@
           ${srv.name} 
         </div>
         <div class="service-cmd" py:if="'start' in srv" >
-          <a href="${srv.start}">Запустить</a>
+          <a href="${srv.start}"><img src="start.png"></img></a>
         </div>
         <div class="service-cmd" py:if="'stop' in srv" >
-          <a href="${srv.stop}">Остановить</a>
+          <a href="${srv.stop}"><img src="stop.png"></img></a>
         </div>
         <div class="service-cmd" py:if="'restart' in srv" >
-          <a href="${srv.restart}">Перезапустить</a>
+          <a href="${srv.restart}"><img src="restart.png"></img></a>
         </div>
       </div>
     </div>
