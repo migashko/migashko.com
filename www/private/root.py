@@ -19,22 +19,22 @@ def run_program(cmd):
   return ret;
 
 def status(name):
-  res = run_program("systemctl is-active " + name)
+  res = run_program("sudo /bin/systemctl is-active " + name)
   res = res.replace('\n','')
   return res
 
 def restart(name):
-  res = run_program("sudo systemctl restart " + name)
+  res = run_program("sudo /bin/systemctl restart " + name)
   res = res.replace('\n','')
   return res
 
 def start(name):
-  res = run_program("sudo systemctl start " + name)
+  res = run_program("sudo /bin/systemctl start " + name)
   res = res.replace('\n','')
   return res
 
 def stop(name):
-  res = run_program("sudo systemctl stop " + name)
+  res = run_program("sudo /bin/systemctl stop " + name)
   res = res.replace('\n','')
   return res
 
