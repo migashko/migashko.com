@@ -9,14 +9,14 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
       <style type="text/css">
         .service{
-          display: table
+          display: table;
+          height: 160px
         }
 
         .service-status{
           display: table-cell;
           vertical-align: middle;
           width:96px;
-
         }
         .service-ico{
           display: table-cell;
@@ -29,11 +29,12 @@
           font-size: 64px;
           font-family: Arial, Verdana, Helvetica, sans-serif;
           width:420px;
+          padding: 10px;
         }
         .service-cmd{
           display: table-cell;
           vertical-align: middle;
-          width:96px;
+          width:128px;
         }
     </style>
   </head>
@@ -50,14 +51,14 @@
         <div class="service-name">
           ${srv.name} 
         </div>
+        <div class="service-cmd" py:if="'restart' in srv" >
+          <a href="${srv.restart}"><img src="restart.png"></img></a>
+        </div>
         <div class="service-cmd" py:if="'start' in srv" >
           <a href="${srv.start}"><img src="start.png"></img></a>
         </div>
         <div class="service-cmd" py:if="'stop' in srv" >
           <a href="${srv.stop}"><img src="stop.png"></img></a>
-        </div>
-        <div class="service-cmd" py:if="'restart' in srv" >
-          <a href="${srv.restart}"><img src="restart.png"></img></a>
         </div>
       </div>
     </div>
