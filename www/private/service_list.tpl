@@ -7,21 +7,58 @@
   <head>
     <title>Список сервисов</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+      <style type="text/css">
+        .service{
+          display: table
+        }
+
+        .service-status{
+          display: table-cell;
+          vertical-align: middle;
+          width:96px;
+
+        }
+        .service-ico{
+          display: table-cell;
+          vertical-align: middle;
+          width:96px;
+        }
+        .service-name{
+          display: table-cell;
+          vertical-align: middle;
+          font-size: 96px;
+          font-family: Arial, Verdana, Helvetica, sans-serif;
+          width:600px;
+        }
+        .service-cmd{
+          display: table-cell;
+          vertical-align: middle;
+          width:96px;
+        }
+    </style>
   </head>
   <body class="index">
     <div py:if="'services' in g" >
       <div class="service" py:for="srv in g.services">
-        ${srv.name} <b>${srv.status}</b> 
-        <div py:if="'start' in srv" >
+        <div class="service-status">        
+          <img src="${srv.status}.png"></img>
+          <!-- <b>${srv.status}</b> --> 
+        </div>
+        <div class="service-ico">
+          <img src="${srv.name}.png"></img>
+        </div>
+        <div class="service-name">
+          ${srv.name} 
+        </div>
+        <div class="service-cmd" py:if="'start' in srv" >
           <a href="${srv.start}">Запустить</a>
         </div>
-        <div py:if="'stop' in srv" >
+        <div class="service-cmd" py:if="'stop' in srv" >
           <a href="${srv.stop}">Остановить</a>
         </div>
-        <div py:if="'restart' in srv" >
+        <div class="service-cmd" py:if="'restart' in srv" >
           <a href="${srv.restart}">Перезапустить</a>
         </div>
-        
       </div>
     </div>
   </body>

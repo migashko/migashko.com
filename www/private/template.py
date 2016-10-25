@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # coding: UTF-8
 
+
 import os, sys
 from genshi.template import TemplateLoader
 from genshi.output import encode, get_serializer
