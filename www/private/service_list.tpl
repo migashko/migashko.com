@@ -29,7 +29,7 @@
           font-size: 64px;
           font-family: Arial, Verdana, Helvetica, sans-serif;
           width:420px;
-          padding: 10px;
+          padding-left: 32px;
         }
         .service-cmd{
           display: table-cell;
