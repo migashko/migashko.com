@@ -10,7 +10,7 @@
     <style type="text/css">
         .result{
           /*vertical-align: middle;*/
-          font-size: 32px;
+          font-size: 48px;
           font-family: Arial, Verdana, Helvetica, sans-serif;
         }
 
