@@ -7,7 +7,7 @@
   <head>
     <title>Список сервисов</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-      <style type="text/css">
+    <style type="text/css">
         .service{
           display: table;
           height: 160px

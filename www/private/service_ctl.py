@@ -29,7 +29,7 @@ if __name__ == '__main__':
       elif par['cmd'][0]=="stop":
         res = root.stop(par['name'][0])
         g["result"]= par['name'][0] + " остановлен"
-      if not res:
+      if res:
         g["result"]= "Error: " + par['name'][0] + ": " + res
     
     

@@ -34,8 +34,8 @@ if __name__ == '__main__':
         item["restart"] = u"service_ctl.py?name=" + names[i] + "&cmd=restart"
         if names[i]!="lighttpd":
           item["stop"] = u"service_ctl.py?name=" + names[i] + "&cmd=stop"
-      else:
-        pass
+      elif not status in ["unknown"]:
+        item["stop"] = u"service_ctl.py?name=" + names[i] + "&cmd=stop"
     
     print(template.load(u"service_list.tpl", dct))
   except Exception as e:

@@ -7,6 +7,21 @@
   <head>
     <title>Список сервисов</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <style type="text/css">
+        .result{
+          /*vertical-align: middle;*/
+          font-size: 32px;
+          font-family: Arial, Verdana, Helvetica, sans-serif;
+        }
+
+        .img-block{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          border: 10px;
+          border-color: black 
+        }
+    </style>
   </head>
   <body class="index">
     <div py:if="'result' in g" >
@@ -14,6 +29,10 @@
         ${g.result}
       </div>
     </div>
-    <a href="service_list.py">Продолжить</a>
+    <!-- <a href="service_list.py">Продолжить</a> 
+    <div class="back"> -->
+      <a href="service_list.py"><img class="img-block" src="back.png" width="256px" height="256px" alt="Back"></img></a>
+    <!-- </div> -->
+
   </body>
 </html>
