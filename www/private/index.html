@@ -30,13 +30,81 @@
 	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 	<meta name="generator" content="Geany 1.24.1" />
         <style type="text/css">
+           A:link { text-decoration: none; color: black;} 
+           A:visited { text-decoration: none; color: black;} 
+           A:active { text-decoration: none; color: black;}
+           A:hover { text-decoration: none; color: black;}
+   
+        .service-list{
+          display: table;
+          height: 160px
+        }
+
+        .service-ico{
+          display: table-cell;
+          vertical-align: middle;
+          width:96px;
+        }
+
+        .transmission-ico{
+          height : 128px;
+          width:128px;
+
+          background: url(transmission.png) 100% 100% no-repeat; /* Добавляем фон */
+          background-size: 128px; /* Масштабируем фон */
+        }
+        
+        .control_panel-ico {
+          height : 128px;
+          width:128px;
+
+          background: url(control_panel.png) 100% 100% no-repeat; /* Добавляем фон */
+          background-size: 128px; /* Масштабируем фон */
+        }
+
+        .service-name{
+          display: table-cell;
+          vertical-align: middle;
+          font-size: 64px;
+          font-family: Arial, Verdana, Helvetica, sans-serif;
+          width:420px;
+          padding-left: 32px;
+        }
         </style>
 </head>
 
 <body>
-  <a href="service_list.py">
-    <img src="control_panel.png" alt="Панель управления"></img>
-  </a>
+  <div class="servive-list">
+    <a href="http://92.243.188.119:9091">
+      <div class="service">
+        <div class="service-ico">
+          <div class="transmission-ico"></div>
+        </div>
+        <div class="service-name">
+          Transmission
+        </div>
+      </div>
+    </a>
+
+    <a href="control_panel.png">
+      <div class="service">
+        <div class="service-ico">
+          <div class="control_panel-ico"></div>
+        </div>
+        <div class="service-name">
+          Управление
+        </div>
+      </div>
+    </a>
+
+        <!--
+    <div class="service">
+      <a href="service_list.py">
+        <img src="control_panel.png" alt="Панель управления"></img>
+      </a>
+    </div>
+    -->
+  </div>
 </body>
 
 </html>
