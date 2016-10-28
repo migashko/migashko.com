@@ -14,6 +14,10 @@
 
           .service-list{
             display: table;
+          }
+          
+          .service {
+            width: 720px;
             height: 160px
           }
 
@@ -23,19 +27,27 @@
             width:96px;
           }
 
-          .transmission-ico{
-            height : 128px;
-            width:128px;
+          .mpd-ico{
+            height : 120px;
+            width:120px;
 
-            background: url(transmission.png) 100% 100% no-repeat; /* Добавляем фон */
+            background: url(mpd.png) 100% 100% no-repeat; /* Добавляем фон */
+            background-size: 120px; /* Масштабируем фон */
+          }
+
+          .kodi-ico{
+            height : 128px;
+            width : 128px;
+
+            background: url(mediacenter.png) 100% 100% no-repeat; /* Добавляем фон */
             background-size: 128px; /* Масштабируем фон */
           }
 
-          .mpd-ico{
+          .transmission-ico{
             height : 128px;
-            width : 128x;
+            width : 128px;
 
-            background: url(mpd.png) 100% 100% no-repeat; /* Добавляем фон */
+            background: url(transmission.png) 100% 100% no-repeat; /* Добавляем фон */
             background-size: 128px; /* Масштабируем фон */
           }
 
@@ -61,6 +73,7 @@
 <body>
 
   <div class="servive-list">
+
     <a href="http://migashko.com/private/player/">
       <div class="service">
         <div class="service-ico">
@@ -71,7 +84,7 @@
         </div>
       </div>
     </a>
-  
+
     <a href="http://92.243.188.119:9091">
       <div class="service">
         <div class="service-ico">
@@ -79,6 +92,17 @@
         </div>
         <div class="service-name">
           Качать
+        </div>
+      </div>
+    </a>
+
+    <a href="http://92.243.188.119:8080">
+      <div class="service">
+        <div class="service-ico">
+          <div class="kodi-ico"></div>
+        </div>
+        <div class="service-name">
+          Смотреть
         </div>
       </div>
     </a>
@@ -93,6 +117,7 @@
         </div>
       </div>
     </a>
+    
   </div>
   
 </body>
