@@ -20,17 +20,23 @@ if __name__ == '__main__':
     query = urlparse(uri).query
     par = parse_qs(query)
     if 'cmd' in par:
+      service=par['name'][0]
+      cmd=par['cmd'][0] 
+#      if service=='mpd' and cmd=='stop' :
+#        service = "mpd.socket"
+ #     print(service)
+      #service = "mpd.socket"
       if par['cmd'][0]=="restart":
-        res = root.restart(par['name'][0])
-        g["result"]= par['name'][0] + " перезапущен"
+        res = root.restart(service)
+        g["result"]= service + " перезапущен"
       elif par['cmd'][0]=="start":
-        res = root.start(par['name'][0])
-        g["result"]= par['name'][0] + " запущен"
+        res = root.start(service)
+        g["result"]= service + " запущен"
       elif par['cmd'][0]=="stop":
-        res = root.stop(par['name'][0])
-        g["result"]= par['name'][0] + " остановлен"
+        res = root.stop(service)
+        g["result"]= service + " остановлен"
       if res:
-        g["result"]= "Error: " + par['name'][0] + ": " + res
+        g["result"]= "Error: " + service + ": " + res
     
     
     
