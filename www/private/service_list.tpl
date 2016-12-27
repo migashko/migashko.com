@@ -28,6 +28,7 @@
           display: table-cell;
           vertical-align: middle;
           width:96px;
+	  height:96px;
         }
         .service-name{
           display: table-cell;
