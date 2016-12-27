@@ -24,7 +24,15 @@ if __name__ == '__main__':
       item = {};
       dct['services'].append(item)
       status = root.status(names[i])
+
+      name = names[i]
+
+#      if name in ["mpd"]:
+#        item["name"]=names[i] + ".socket"
+#      else:
+#        
       item["name"]=names[i]
+
       item["status"] = status
       item["image"] = names[i]+".png"
       

@@ -45,9 +45,10 @@
         }
         #reload
         {
+          display: block;
           height : 128px;
           width:128px;
-          padding-left: 314px;
+          /*padding-left: 314px;*/:
         }
         #reload-image
         {
@@ -57,7 +58,9 @@
           background-size: 128px; /* Масштабируем фон */
         }
         .img-block{
-          display: block;
+          display: inline;
+          /*padding-right: 32px;*/
+
           margin-left: auto;
           margin-right: auto;
           border: 10px;
@@ -90,14 +93,12 @@
         </div>
       </div>
     </div>
-    <div>
-    <a href="index.html"><img class="img-block" src="back.png" width="256px" height="256px" alt="Back"></img></a>
-    </div>
     <div id="reload">
       <a id="reload-a" href="service_list.py">
         <div id="reload-image">
         </div>
       </a>
     </div>
+    <a href="index.html"><img class="img-block" src="back.png" width="128px" height="128px" alt="Back"></img></a>
   </body>
 </html>
