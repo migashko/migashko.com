@@ -73,8 +73,8 @@
           <img width="48px" src="${srv.status}.png"></img>
           <!-- <b>${srv.status}</b> --> 
         </div>
-        <div class="service-ico">
-          <img src="${srv.name}.png"></img>
+        <div class="service-ico" >
+          <img src="${srv.name}.png" width="96px" height="96px"></img>
         </div>
         <div class="service-name">
           ${srv.name} 
