@@ -17,7 +17,7 @@ if __name__ == '__main__':
   try:
 #    print( getpass.getuser() )
     
-    names=["mpd", "transmission", "mediacenter", "lighttpd"]
+    names=["mpd", "transmission", "mediacenter", "lighttpd", "smbd"]
     dct={}
     dct['services']=[]
     for i in range(len(names)):
