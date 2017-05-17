@@ -71,6 +71,18 @@
     </style>
   </head>
   <body class="index">
+    
+    <a href="/">
+      <div class="service">
+        <div class="service-ico">
+          <div class="back-ico"></div>
+        </div>
+        <div class="service-name">
+          Назад
+        </div>
+      </div>
+    </a>
+
     <div py:if="'services' in g" >
       <div class="service" py:for="srv in g.services">
         <div class="service-status">        

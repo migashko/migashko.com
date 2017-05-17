@@ -15,8 +15,6 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 if __name__ == '__main__':
   try:
-#    print( getpass.getuser() )
-    
     names=["mpd", "transmission", "mediacenter", "smbd", "lighttpd"]
     dct={}
     dct['services']=[]
@@ -27,10 +25,6 @@ if __name__ == '__main__':
 
       name = names[i]
 
-#      if name in ["mpd"]:
-#        item["name"]=names[i] + ".socket"
-#      else:
-#        
       item["name"]=names[i]
 
       item["status"] = status
@@ -44,7 +38,7 @@ if __name__ == '__main__':
           item["stop"] = u"service_ctl.py?name=" + names[i] + "&cmd=stop"
       elif not status in ["unknown"]:
         item["stop"] = u"service_ctl.py?name=" + names[i] + "&cmd=stop"
-    
+
     print(template.load(u"service_list.tpl", dct))
   except Exception as e:
     print(u"I/O error: {0}".format( str(e)))

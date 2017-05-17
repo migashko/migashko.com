@@ -24,15 +24,27 @@
     </style>
   </head>
   <body class="index">
+
+    <a href="/">
+      <div class="service">
+        <div class="service-ico">
+          <div class="back-ico"></div>
+        </div>
+        <div class="service-name">
+          Назад
+        </div>
+      </div>
+    </a>
+
     <div py:if="'result' in g" >
       <div class="result">
         ${g.result}
       </div>
     </div>
     <!-- <a href="service_list.py">Продолжить</a> 
-    <div class="back"> -->
+    <div class="back">
       <a href="service_list.py"><img class="img-block" src="back.png" width="256px" height="256px" alt="Back"></img></a>
-    <!-- </div> -->
+    </div> -->
 
   </body>
 </html>
