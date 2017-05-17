@@ -67,7 +67,14 @@
           border: 10px;
           border-color: black 
         }
-        
+
+        .back-ico {
+            height : 128px;
+            width:128px;
+            background: url(back.png) 100% 100% no-repeat; /* Добавляем фон */
+            background-size: 128px; /* Масштабируем фон */
+        }
+
     </style>
   </head>
   <body class="index">
