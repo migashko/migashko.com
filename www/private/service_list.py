@@ -39,6 +39,6 @@ if __name__ == '__main__':
       elif not status in ["unknown"]:
         item["stop"] = u"service_ctl.py?name=" + names[i] + "&cmd=stop"
 
-    print(template.load(u"service_list.tpl", dct))
+    print(template.load(u"service_list.html", dct))
   except Exception as e:
     print(u"I/O error: {0}".format( str(e)))

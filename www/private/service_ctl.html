@@ -21,14 +21,44 @@
           border: 10px;
           border-color: black 
         }
+        
+        .back-ico {
+            height : 128px;
+            width: 128px;
+            background: url(back.png) 100% 100% no-repeat; /* Добавляем фон */
+            background-size: 128px; /* Масштабируем фон */
+        }
+
+        .service-ico{
+          display: table-cell;
+          vertical-align: middle;
+          width:96px;
+          height:96px;
+        }
+
+        .service-name{
+          display: table-cell;
+          vertical-align: middle;
+          font-size: 64px;
+          font-family: Arial, Verdana, Helvetica, sans-serif;
+          width:420px;
+          padding-left: 32px;
+        }
+
     </style>
   </head>
   <body class="index">
 
-    <a href="/">
+    <div py:if="'result' in g" >
+      <div class="result">
+        ${g.result}
+      </div>
+    </div>
+    
+    <a href="service_list.py">
       <div class="service">
-        <div class="service-ico">
-          <div class="back-ico"></div>
+        <div class="service-ico" >
+          <img src="images/back.png" width="96px" height="96px"></img>
         </div>
         <div class="service-name">
           Назад
@@ -36,15 +66,6 @@
       </div>
     </a>
 
-    <div py:if="'result' in g" >
-      <div class="result">
-        ${g.result}
-      </div>
-    </div>
-    <!-- <a href="service_list.py">Продолжить</a> 
-    <div class="back">
-      <a href="service_list.py"><img class="img-block" src="back.png" width="256px" height="256px" alt="Back"></img></a>
-    </div> -->
 
   </body>
 </html>
