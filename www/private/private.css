@@ -1,0 +1,47 @@
+A:link    { text-decoration: none; color: black;} 
+A:visited { text-decoration: none; color: black;} 
+A:active  { text-decoration: none; color: black;}
+A:hover   { text-decoration: none; color: black;}
+
+.superblock
+{
+  display: inline-block;
+  width: 1080px;
+  height: 160px;
+}
+
+.status-ico
+{
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 24px;
+  height: 48px;
+  width: 48px;
+}
+
+.common-ico
+{
+  display: inline-block;
+  vertical-align: middle;
+  height: 128px;
+  width: 128px;
+}
+
+.control-ico
+{
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 24px;
+  height: 128px;
+  width: 128px;
+}
+
+.common-text{
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+  overflow: hidden;
+  font-size: 64px;
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  width:420px;
+}

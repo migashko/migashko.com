@@ -7,93 +7,37 @@
   <head>
     <title>Список сервисов</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-    <style type="text/css">
-        .service{
-          display: table;
-          height: 160px
-        }
-
-        .service-status{
-          display: table-cell;
-          vertical-align: middle;
-          width:96px;
-         
-        }
-
-        .service-status img{
-           padding-left: 24px
-        }
-
-        .service-ico{
-          display: table-cell;
-          vertical-align: middle;
-          width:96px;
-          height:96px;
-        }
-        .service-name{
-          display: table-cell;
-          vertical-align: middle;
-          font-size: 64px;
-          font-family: Arial, Verdana, Helvetica, sans-serif;
-          width:420px;
-          padding-left: 32px;
-        }
-        .service-cmd{
-          display: table-cell;
-          vertical-align: middle;
-          width:128px;
-          padding-left: 16px;
-        }
-        #reload
-        {
-          display: block;
-          height : 128px;
-          width:128px;
-          /*padding-left: 314px;*/:
-        }
-        /*
-        #reload-image
-        {
-          height : 128px;
-          width:128px;
-          background: url(images/reload.png) 100% 100% no-repeat; /* Добавляем фон */
-          background-size: 128px; /* Масштабируем фон */
-        }
-        */
-        .img-block{
-          display: inline;
-          /*padding-right: 32px;*/
-
-          margin-left: auto;
-          margin-right: auto;
-          border: 10px;
-          border-color: black 
-        }
-
-        .back-ico {
-            height : 128px;
-            width:128px;
-            background: url(images/back.png) 100% 100% no-repeat; /* Добавляем фон */
-            background-size: 128px; /* Масштабируем фон */
-        }
-
-    </style>
+    <link rel="stylesheet" href="private.css"/>
   </head>
-  <body class="index">
-    
-    <a href="index.html">
-      <div class="service">
-        <div class="service-ico" >
-          <img src="images/back.png" width="96px" height="96px"></img>
-        </div>
-        <div class="service-name">
-          Назад
-        </div>
-      </div>
+  
+  <body>
+
+    <a href="/index.html" class="superblock">
+      <img src="images/back.png" class="common-ico"/>
+      <div class="common-text">Назад</div>
     </a>
 
-    <div py:if="'services' in g" >
-      <div class="service" py:for="srv in g.services">
+    <py:if test="'services' in g">
+      <py:for each="srv in g.services">
+      
+      <div class="superblock">
+        <img src="images/${srv.status}.png" class="status-ico"></img>
+        <img src="images/${srv.name}.png" class="common-ico"/>
+        <div class="common-text"> ${srv.name} </div>
+      
+        <a href="${srv.restart}" py:if="'restart' in srv" >
+          <img src="images/restart.png" class="control-ico" ></img>
+        </a>
+
+        <a href="${srv.start}" py:if="'start' in srv" >
+          <img src="images/start.png" class="control-ico" ></img>
+        </a>
+
+        <a href="${srv.stop}" py:if="'stop' in srv" >
+          <img src="images/stop.png" class="control-ico" ></img>
+        </a>
+      </div>
+      <!--
         <div class="service-status">
           <img width="48px" src="images/${srv.status}.png"></img>
         </div>
@@ -112,40 +56,21 @@
         <div class="service-cmd" py:if="'stop' in srv" >
           <a href="${srv.stop}"><img src="images/stop.png"></img></a>
         </div>
-      </div>
-    </div>
+      -->
+
+      </py:for>
+    </py:if>
+
     
-    <a href="service_list.py">
-      <div class="service">
-        <div class="service-ico" >
-          <img src="images/reload.png" width="96px" height="96px"></img>
-        </div>
-        <div class="service-name">
-          Обновить
-        </div>
-      </div>
+    <a href="/service_list.py" class="superblock">
+      <img src="images/reload.png" class="common-ico"/>
+      <div class="common-text"> Обновить </div>
     </a>
 
-    <a href="/">
-      <div class="service">
-        <div class="service-ico" >
-          <img src="images/back.png" width="96px" height="96px"></img>
-        </div>
-        <div class="service-name">
-          В начало
-        </div>
-      </div>
+    <a href="/" class="superblock">
+      <img src="images/back.png" class="common-ico"/>
+      <div class="common-text"> Домой </div>
     </a>
 
-    <!--
-    <div id="reload">
-      <a id="reload-a" href="service_list.py">
-        <div id="reload-image">
-        </div>
-      </a>
-    </div>
-    <a href="index.html"><img class="img-block" src="images/back.png" width="128px" height="128px" alt="Back"></img></a>
-    -->
-    
   </body>
 </html>

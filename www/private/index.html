@@ -6,138 +6,34 @@
         <title>migashko.com</title>
         <meta http-equiv="content-type" content="text/html;charset=utf-8" />
         <meta name="generator" content="Geany 1.24.1" />
-        <style type="text/css">
-          A:link { text-decoration: none; color: black;} 
-          A:visited { text-decoration: none; color: black;} 
-          A:active { text-decoration: none; color: black;}
-          A:hover { text-decoration: none; color: black;}
-
-          .service-list{
-            display: table;
-          }
-          
-          .service {
-            width: 720px;
-            height: 160px
-          }
-
-          .service-ico{
-            display: table-cell;
-            vertical-align: middle;
-            width:96px;
-          }
-
-          .mpd-ico{
-            height : 120px;
-            width:120px;
-
-            background: url(images/mpd.png) 100% 100% no-repeat; /* Добавляем фон */
-            background-size: 120px; /* Масштабируем фон */
-          }
-
-          .kodi-ico{
-            height : 128px;
-            width : 128px;
-
-            background: url(images/mediacenter.png) 100% 100% no-repeat; /* Добавляем фон */
-            background-size: 128px; /* Масштабируем фон */
-          }
-
-          .transmission-ico{
-            height : 128px;
-            width : 128px;
-
-            background: url(images/transmission.png) 100% 100% no-repeat; /* Добавляем фон */
-            background-size: 128px; /* Масштабируем фон */
-          }
-
-          .control_panel-ico {
-            height : 128px;
-            width:128px;
-
-            background: url(images/control_panel.png) 100% 100% no-repeat; /* Добавляем фон */
-            background-size: 128px; /* Масштабируем фон */
-          }
-
-          .back-ico {
-            height : 128px;
-            width:128px;
-
-            background: url(images/back.png) 100% 100% no-repeat; /* Добавляем фон */
-            background-size: 128px; /* Масштабируем фон */
-          }
-
-          .service-name{
-            display: table-cell;
-            vertical-align: middle;
-            font-size: 64px;
-            font-family: Arial, Verdana, Helvetica, sans-serif;
-            width:420px;
-            padding-left: 32px;
-          }
-        </style>
+        <link rel="stylesheet" href="private.css" />
 </head>
 
 <body>
-
-  <div class="service-list">
-
-    <a href="/">
-      <div class="service">
-        <div class="service-ico">
-          <div class="back-ico"></div>
-        </div>
-        <div class="service-name">
-          Назад
-        </div>
-      </div>
+    <a href="/" class="superblock">
+      <img src="images/back.png" class="common-ico"/>
+      <div class="common-text"> Назад </div>
     </a>
 
-    <a href="http://migashko.com/private/player/">
-      <div class="service">
-        <div class="service-ico">
-          <div class="mpd-ico"></div>
-        </div>
-        <div class="service-name">
-          Слушать
-        </div>
-      </div>
+    <a href="http://migashko.com/private/player/" class="superblock">
+      <img src="images/mpd.png" class="common-ico"/>
+      <div class="common-text"> Слушать </div>
     </a>
 
-    <a href="http://92.243.188.119:9091">
-      <div class="service">
-        <div class="service-ico">
-          <div class="transmission-ico"></div>
-        </div>
-        <div class="service-name">
-          Качать
-        </div>
-      </div>
+    <a href="http://92.243.188.119:9091" class="superblock">
+      <img src="images/transmission.png" class="common-ico"/>
+      <div class="common-text"> Качать </div>
     </a>
 
-    <a href="http://92.243.188.119:8080">
-      <div class="service">
-        <div class="service-ico">
-          <div class="kodi-ico"></div>
-        </div>
-        <div class="service-name">
-          Смотреть
-        </div>
-      </div>
+    <a href="http://92.243.188.119:8080" class="superblock">
+      <img src="images/mediacenter.png" class="common-ico"/>
+      <div class="common-text"> Смотреть </div>
     </a>
 
-    <a href="service_list.py">
-      <div class="service">
-        <div class="service-ico">
-          <div class="control_panel-ico"></div>
-        </div>
-        <div class="service-name">
-          Управлять
-        </div>
-      </div>
+    <a href="service_list.py" class="superblock">
+      <img src="images/control_panel.png" class="common-ico"/>
+      <div class="common-text"> Управлять </div>
     </a>
-
-  </div>
   
 </body>
 
