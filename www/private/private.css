@@ -45,3 +45,11 @@ A:hover   { text-decoration: none; color: black;}
   font-family: Arial, Verdana, Helvetica, sans-serif;
   width:420px;
 }
+
+.error-message{
+  display: block;
+  font-size: 24px;
+  font-family: Arial, Verdana, Helvetica, sans-serif;
+  color: Red
+  /*width:720px;*/
+}

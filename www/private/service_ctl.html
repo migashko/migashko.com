@@ -8,66 +8,28 @@
     <title>Список сервисов</title>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <link rel="stylesheet" href="private.css"/>
-    
-    <style type="text/css">
-        .result{
-          /*vertical-align: middle;*/
-          font-size: 48px;
-          font-family: Arial, Verdana, Helvetica, sans-serif;
-        }
-
-        .img-block{
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          border: 10px;
-          border-color: black 
-        }
-        
-        .back-ico {
-            height : 128px;
-            width: 128px;
-            background: url(back.png) 100% 100% no-repeat; /* Добавляем фон */
-            background-size: 128px; /* Масштабируем фон */
-        }
-
-        .service-ico{
-          display: table-cell;
-          vertical-align: middle;
-          width:96px;
-          height:96px;
-        }
-
-        .service-name{
-          display: table-cell;
-          vertical-align: middle;
-          font-size: 64px;
-          font-family: Arial, Verdana, Helvetica, sans-serif;
-          width:420px;
-          padding-left: 32px;
-        }
-
-    </style>
   </head>
+  
   <body class="index">
 
+    <a href="./service_list.py" class="superblock">
+      <img src="images/back.png" class="common-ico"/>
+      <div class="common-text"> Назад </div>
+    </a>
+
+    <div class="superblock">
+      <img src="images/${g.status}.png" class="status-ico"></img>
+      <img src="images/${g.name}.png" class="common-ico"/>
+      <div class="common-text"> ${g.result} </div>
+    </div>
+    <div class="error-message">${g.message} </div>
+
+    <!--
     <div py:if="'result' in g" >
       <div class="result">
         ${g.result}
       </div>
     </div>
-    
-    <a href="service_list.py">
-      <div class="service">
-        <div class="service-ico" >
-          <img src="images/back.png" width="96px" height="96px"></img>
-        </div>
-        <div class="service-name">
-          Назад
-        </div>
-      </div>
-    </a>
-
-
+    -->
   </body>
 </html>

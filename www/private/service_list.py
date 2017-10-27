@@ -24,12 +24,8 @@ if __name__ == '__main__':
       status = root.status(names[i])
 
       name = names[i]
-
       item["name"]=names[i]
-
       item["status"] = status
-      item["image"] = names[i]+".png"
-      
       if status in ["inactive", "failed"]:
         item["start"] = u"service_ctl.py?name=" + names[i] + "&cmd=start"
       elif status == "active":
