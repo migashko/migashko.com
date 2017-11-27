@@ -38,3 +38,9 @@ def stop(name):
   res = res.replace('\n','')
   return res
 
+def run_du(path):
+  res = run_program("sudo du --max-depth=1 " + path + " | sort -n");
+  return res
+
+
+
