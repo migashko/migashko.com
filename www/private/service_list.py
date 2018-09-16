@@ -15,7 +15,7 @@ sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 if __name__ == '__main__':
   try:
-    names=["mpd", "transmission", "mediacenter", "smbd", "lighttpd"]
+    names=["minidlna", "mpd", "transmission", "mediacenter", "smbd", "lighttpd"]
     dct={}
     dct['services']=[]
     for i in range(len(names)):
