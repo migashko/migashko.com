@@ -4,8 +4,6 @@
 
 import os, sys
 import template
-from urllib.parse import urlparse
-from urllib.parse import parse_qs
 import root
 
 if __name__ == '__main__':
