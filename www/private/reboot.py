@@ -11,6 +11,6 @@ import root
 if __name__ == '__main__':
   try:
     res = root.reboot()
-    print(template.load(u"reboot.html", {}))
+    print(template.load(u"reboot.html", res))
   except Exception as e:
     print(u"folder_sizes.py exeption: I/O error: {0}".format( str(e)))
