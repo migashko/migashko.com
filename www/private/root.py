@@ -19,7 +19,8 @@ def run_program(cmd):
   return ret;
 
 def reboot():
-  return run_program("sudo reboot")
+  res = run_program("sudo reboot")
+  return res
 
 def status(name):
   res = run_program("sudo /bin/systemctl is-active " + name)
