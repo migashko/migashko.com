@@ -18,6 +18,9 @@ def run_program(cmd):
     ret = ret + s.decode("utf-8") + u"\n"
   return ret;
 
+def reboot():
+  run_program("sudo reboot")
+
 def status(name):
   res = run_program("sudo /bin/systemctl is-active " + name)
   res = res.replace('\n','')
