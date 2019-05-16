@@ -19,7 +19,7 @@ def run_program(cmd):
   return ret;
 
 def reboot():
-  res = run_program("sudo reboot")
+  res = run_program("sudo /sbin/shutdown -r 1")
   return res
 
 def status(name):
@@ -43,7 +43,7 @@ def stop(name):
   return res
 
 def run_du(path):
-  res = run_program("sudo du --max-depth=1 " + path + " | sort -n");
+  res = run_program("sudo /usr/bin/du -h --max-depth=1 " + path + " | sort -n");
   return res
 
 

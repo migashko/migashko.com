@@ -1,0 +1,8 @@
+if [[ $# != 2 ]]; then
+ echo "illegal number of parameters"
+ echo cuebreakpoints '<cue file>' | shnsplit -o flac '<audio flac file>'  
+ exit 1
+fi
+
+cuebreakpoints "$1" | shnsplit -o flac "$2"
+

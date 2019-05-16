@@ -11,7 +11,7 @@ import root
 if __name__ == '__main__':
   try:
     g={}
-    res = root.run_du("/hdd")
+    res = root.run_du("/hdd/")
     #res = root.run_du("/home/migashko")
     line = res.split('\n')
     for l in line:
@@ -23,4 +23,4 @@ if __name__ == '__main__':
     #print(g)
     print(template.load(u"folder_sizes.html", g))
   except Exception as e:
-    print(u"folder_sizes.py exeption: I/O error: {0}".format( str(e)))
+    print(u"folder_sizes.py -1- exeption: I/O error: {0}".format( str(e)))

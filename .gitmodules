@@ -1,0 +1,3 @@
+[submodule "split2flac"]
+	path = split2flac
+	url = https://github.com/ftrvxmtrx/split2flac.git
