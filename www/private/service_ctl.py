@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # coding: UTF-8
 
+# sudo apt-get install -y python3-setuptools
+# sudo easy_install3 Genshi
 import os, sys
 import template
 from urllib.parse import urlparse
