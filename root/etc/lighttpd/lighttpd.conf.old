@@ -1,0 +1,60 @@
+server.modules = (
+	"mod_auth",
+        "mod_access",
+        "mod_alias",
+        "mod_compress",
+        "mod_redirect",
+        "mod_cgi",
+        "mod_rewrite",
+)
+
+server.document-root        = "/hdd/migashko.com/www"
+server.upload-dirs          = ( "/var/cache/lighttpd/uploads" )
+server.errorlog             = "/var/log/lighttpd/error.log"
+server.pid-file             = "/var/run/lighttpd.pid"
+server.username             = "www-data"
+server.groupname            = "www-data"
+server.port                 = 80
+
+## тип backend'а
+# plain, htpasswd, ldap или htdigest
+auth.backend               = "htdigest" 
+## для htpasswd
+auth.backend.htdigest.userfile = "/hdd/sys/lighttpd.user.htdigest" 
+auth.require = ("/private/" =>
+                 (
+                 # Ограничение доступа к информации о сервере
+                   "method"  => "digest",
+                   "realm"   => "Authorized users only",
+                   "require" => "valid-user" 
+                 )
+               )
+
+
+index-file.names            = ( "index.php", "index.html", "index.lighttpd.html" )
+url.access-deny             = ( "~", ".inc" )
+static-file.exclude-extensions = ( ".php", ".pl", ".fcgi" )
+
+compress.cache-dir          = "/var/cache/lighttpd/compress/"
+compress.filetype           = ( "application/javascript", "text/css", "text/html", "text/plain" )
+
+# default listening port for IPv6 falls back to the IPv4 port
+include_shell "/usr/share/lighttpd/use-ipv6.pl " + server.port
+include_shell "/usr/share/lighttpd/create-mime.assign.pl"
+include_shell "/usr/share/lighttpd/include-conf-enabled.pl"
+
+$HTTP["url"] =~ "^" {
+   cgi.assign = ( ".pl"  => "/usr/bin/perl",
+                  ".cgi" => "/usr/bin/perl",
+                  ".rb"  => "/usr/bin/ruby",
+                  ".erb" => "/usr/bin/eruby",
+                  ".py"  => "/usr/bin/python3",
+                  ".sh"  => "/bin/sh"
+   )
+}
+
+$HTTP["host"]  == "play.migashko.com" {
+	server.document-root = "/hdd/migashko.com/www/private/play/",
+        accesslog.filename   = "/var/log/lighttpd/play.migashko.com-access.log"
+}
+
