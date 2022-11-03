@@ -8,7 +8,7 @@ server.modules = (
         "mod_rewrite",
 )
 
-server.document-root        = "/hdd/migashko.com/www"
+server.document-root        = "/home/osmc/www"
 server.upload-dirs          = ( "/var/cache/lighttpd/uploads" )
 server.errorlog             = "/var/log/lighttpd/error.log"
 server.pid-file             = "/var/run/lighttpd.pid"
@@ -53,8 +53,8 @@ $HTTP["url"] =~ "^" {
    )
 }
 
-$HTTP["host"]  == "play.migashko.com" {
-	server.document-root = "/hdd/migashko.com/www/private/play/",
-        accesslog.filename   = "/var/log/lighttpd/play.migashko.com-access.log"
+$HTTP["host"]  == "play.osmc-pi4" {
+	server.document-root = "/home/osmc/www/private/play/",
+        accesslog.filename   = "/var/log/lighttpd/play.osmc-pi4-access.log"
 }
 
